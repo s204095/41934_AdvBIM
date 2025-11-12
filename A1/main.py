@@ -11,8 +11,6 @@ import ifcopenshell
 from external.BIManalyst_g_48.rules import SpaceRequirement
 from external.BIManalyst_g_46 import main
 
-# git submodule update --rebase --remote --recursive
-
 
 def check_space(model):
     name = input("Enter space name: ----Caps sensitive---- ")

@@ -1,0 +1,38 @@
+{
+  "project": "Copenhagen Airport T3",
+  "location": "Kastrup",
+  "elements": [
+    {
+      "type": "IfcWall",
+      "count": 50
+    },
+    {
+      "type": "IfcSlab",
+      "count": 15
+    },
+    {
+      "type": "IfcBeam",
+      "count": 28
+    },
+    {
+      "type": "IfcWall",
+      "Material": "Concrete",
+      "Volume": 12.4,
+      "count": 50
+    },
+    {
+      "type": "IfcSlab",
+      "Material": "Steel",
+      "Volume": 8.1
+    },
+    {
+      "type": "IfcBeam",
+      "Material": "Wood",
+      "Volume": 5.7
+    },
+    {
+      "type": "Ifcwindows",
+      "count": 12
+    }
+  ]
+}
