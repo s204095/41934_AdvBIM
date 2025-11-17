@@ -1,10 +1,16 @@
 import os, json
 import ifcopenshell
+import sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, os.pardir))
 
+for path in [project_root, os.path.join(project_root, "external")]:
+    if path not in sys.path:
+        sys.path.append(path)   
 
 # Analyst group imports here
 from external.BIManalyst_g_48.rules import SpaceRequirement
-from external.BIManalyst_g_46 import main
+
 
 def _ensure_dir(path: str):
     d = os.path.dirname(path)
