@@ -3,7 +3,7 @@
 
 
 {
-  "03.90.01 Bygningsbasis": 55555555555555
+  "03.90.01 Bygningsbasis": 1222.96,
   "04.90.01 Primære bygningsdele": 6747.72,
   "04.90.02 Komplettering": 2384.61,
   "04.90.03 Overflader": 3147.86,
@@ -15,5 +15,5 @@
   "05.36.95 Køling": 822.23,
   "05.51.27 Elinst": 1233.65,
   "05.90.04 VVS øvrige": 121.06,
-  "07.90.01 Fast inventar": 12451251515
+  "07.90.01 Fast inventar": 1548.53
 }
