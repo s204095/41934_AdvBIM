@@ -315,7 +315,7 @@ def process_json(
     output_path = Path(output_path)
     config_dir = Path(config_dir)
 
-    # SMART CONFIG SELECTION
+    # CONFIG SELECTION
     effective_config_dir = get_effective_config_dir(config_dir)
     effective_weights_file = get_effective_weights_file(effective_config_dir, weights_override_path)
     
@@ -323,8 +323,8 @@ def process_json(
     print(f"Using weights file: {effective_weights_file}")
 
     # 1) Load config
-    room_types = load_room_types(effective_config_dir)
-    space_keywords = load_space_keywords(effective_config_dir)
+    room_types = load_room_types(config_dir)
+    space_keywords = load_space_keywords(config_dir)
     cost_rates = load_cost_rates(effective_config_dir)
     weights = load_weights_matrix(effective_config_dir, effective_weights_file)
 
@@ -368,7 +368,7 @@ def process_json(
 
 
 # =======================================================
-# CLI ENTRY POINT (UNCHANGED)
+# CLI ENTRY POINT
 # =======================================================
 
 def _parse_args() -> argparse.Namespace:

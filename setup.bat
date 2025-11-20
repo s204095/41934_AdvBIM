@@ -51,6 +51,15 @@ echo ✓ altair installed
 python -m pip install pathlib2
 echo ✓ pathlib2 installed
 
+python -m pip install numpy
+echo ✓ numpy installed
+
+python -m pip install csv
+echo ✓ csv installed
+
+
+
+
 echo.
 echo All dependencies installed successfully!
 echo.
