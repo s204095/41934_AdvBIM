@@ -26,6 +26,10 @@ if errorlevel 1 (
 echo ✓ Python is installed
 echo.
 
+echo Checking Git Submodules...
+git submodule update --init --recursive
+
+
 :: Upgrade pip first
 echo Updating pip...
 python -m pip install --upgrade pip
