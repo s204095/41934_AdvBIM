@@ -7,34 +7,64 @@ from typing import Dict, List, Tuple
 
 
 # =======================================================
-# CONFIG LOADING FUNCTIONS
+# CONFIG LOADING FUNCTIONS (WITH ERROR HANDLING)
 # =======================================================
 
 def load_room_types(config_dir: str | Path) -> List[str]:
     """Load list of room types from room_types.json."""
     config_dir = Path(config_dir)
-    with open(config_dir / "room_types.json", "r", encoding="utf-8") as f:
+    file_path = config_dir / "room_types.json"
+    
+    if not file_path.exists():
+        # Fallback to default data directory
+        default_path = Path("data") / "room_types.json"
+        if default_path.exists():
+            file_path = default_path
+        else:
+            raise FileNotFoundError(f"room_types.json not found in {config_dir} or data/")
+    
+    with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def load_space_keywords(config_dir: str | Path) -> Dict[str, List[str]]:
     """Load mapping: room_type -> [keywords] from space_keywords.json."""
     config_dir = Path(config_dir)
-    with open(config_dir / "space_keywords.json", "r", encoding="utf-8") as f:
+    file_path = config_dir / "space_keywords.json"
+    
+    if not file_path.exists():
+        # Fallback to default data directory
+        default_path = Path("data") / "space_keywords.json"
+        if default_path.exists():
+            file_path = default_path
+        else:
+            raise FileNotFoundError(f"space_keywords.json not found in {config_dir} or data/")
+    
+    with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def load_cost_rates(config_dir: str | Path) -> Dict[str, float]:
     """Load mapping: cost_group -> price_per_m2 from cost_rates.json."""
     config_dir = Path(config_dir)
-    with open(config_dir / "cost_rates.json", "r", encoding="utf-8") as f:
+    file_path = config_dir / "cost_rates.json"
+    
+    if not file_path.exists():
+        # Fallback to default data directory
+        default_path = Path("data") / "cost_rates.json"
+        if default_path.exists():
+            file_path = default_path
+        else:
+            raise FileNotFoundError(f"cost_rates.json not found in {config_dir} or data/")
+    
+    with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def load_weights_matrix(config_dir: str | Path, filename: str) -> Dict[str, Dict[str, float]]:
     """
     Load full weight matrix from JSON.
-
+    
     Expected structure:
     {
       "ROOM_TYPE": {
@@ -45,12 +75,82 @@ def load_weights_matrix(config_dir: str | Path, filename: str) -> Dict[str, Dict
     }
     """
     config_dir = Path(config_dir)
-    with open(config_dir / filename, "r", encoding="utf-8") as f:
+    file_path = config_dir / filename
+    
+    if not file_path.exists():
+        # If custom weights file doesn't exist, fall back to default
+        if filename != "weights_default.json":
+            default_path = config_dir / "weights_default.json"
+            if default_path.exists():
+                file_path = default_path
+            else:
+                # Final fallback to data directory
+                default_path = Path("data") / "weights_default.json"
+                if default_path.exists():
+                    file_path = default_path
+                else:
+                    raise FileNotFoundError(f"Weights file {filename} not found in {config_dir} or data/")
+        else:
+            # Looking for default weights but not found
+            default_path = Path("data") / "weights_default.json"
+            if default_path.exists():
+                file_path = default_path
+            else:
+                raise FileNotFoundError(f"weights_default.json not found in {config_dir} or data/")
+    
+    with open(file_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 # =======================================================
-# CLASSIFICATION FUNCTIONS
+# SMART CONFIG DIRECTORy SELECTION
+# =======================================================
+
+def get_effective_config_dir(requested_config_dir: Path) -> Path:
+    """
+    Determine the best config directory to use.
+    If we're given 'data' but custom_data exists with files, use custom_data instead.
+    """
+    requested_config_dir = Path(requested_config_dir)
+    custom_data_dir = Path("data/custom_data")  # Fixed path
+    
+    # If custom_data exists and has config files, use it
+    if custom_data_dir.exists():
+        config_files = [
+            custom_data_dir / "cost_rates.json",
+            custom_data_dir / "custom_weights.json", 
+            custom_data_dir / "weights_default.json"
+        ]
+        if any(f.exists() for f in config_files):
+            return custom_data_dir
+    
+    # Otherwise use the requested directory
+    return requested_config_dir
+
+def get_effective_weights_file(config_dir: Path, requested_weights_file: str = None) -> str:
+    """
+    Determine which weights file to use.
+    Priority: custom_weights.json > requested_weights_file > weights_default.json
+    """
+    config_dir = Path(config_dir)
+    
+    # First check for custom_weights.json
+    custom_weights = config_dir / "custom_weights.json"
+    if custom_weights.exists():
+        return "custom_weights.json"
+    
+    # Then use requested weights file if it exists
+    if requested_weights_file:
+        requested_path = config_dir / requested_weights_file
+        if requested_path.exists():
+            return requested_weights_file
+    
+    # Final fallback
+    return "weights_default.json"
+
+
+# =======================================================
+# CLASSIFICATION FUNCTIONS (UNCHANGED)
 # =======================================================
 
 def _normalize(text: str) -> str:
@@ -117,7 +217,7 @@ def classify_all_spaces(
 
 
 # =======================================================
-# COST ALLOCATION FUNCTIONS
+# COST ALLOCATION FUNCTIONS (UNCHANGED)
 # =======================================================
 
 def allocate_costs(
@@ -194,7 +294,7 @@ def allocate_costs(
 
 
 # =======================================================
-# HIGH-LEVEL PIPELINE
+# HIGH-LEVEL PIPELINE (UPDATED)
 # =======================================================
 
 def process_json(
@@ -215,16 +315,18 @@ def process_json(
     output_path = Path(output_path)
     config_dir = Path(config_dir)
 
+    # SMART CONFIG SELECTION
+    effective_config_dir = get_effective_config_dir(config_dir)
+    effective_weights_file = get_effective_weights_file(effective_config_dir, weights_override_path)
+    
+    print(f"Using config directory: {effective_config_dir}")
+    print(f"Using weights file: {effective_weights_file}")
+
     # 1) Load config
-    room_types = load_room_types(config_dir)
-    space_keywords = load_space_keywords(config_dir)
-    cost_rates = load_cost_rates(config_dir)
-
-    # default full weights file (complete matrix)
-    default_weights_file = "weights_default.json"
-    weights_file = weights_override_path or default_weights_file
-    weights = load_weights_matrix(config_dir, weights_file)
-
+    room_types = load_room_types(effective_config_dir)
+    space_keywords = load_space_keywords(effective_config_dir)
+    cost_rates = load_cost_rates(effective_config_dir)
+    weights = load_weights_matrix(effective_config_dir, effective_weights_file)
 
     # 2) Read input JSON
     with open(input_path, "r", encoding="utf-8") as f:
@@ -240,7 +342,7 @@ def process_json(
     )
 
     # 4) Compute total area, allocate costs
-    total_area = sum(areas_spaces.values())
+    total_area = data["Total summed area"]
     allocation = allocate_costs(
         area_by_roomtype=area_by_roomtype,
         total_area=total_area,
@@ -250,13 +352,14 @@ def process_json(
     )
 
     summary = {
-        "total_area_basis": total_area,
+        "Total summed area": total_area,
         "calculated_total_cost": allocation["total_cost"],
         "calculated_unit_price": allocation["total_unit_price"],
         "per_room_type": allocation["per_room_type"],
         "per_cost_group": allocation["per_cost_group"],
         "unclassified_spaces": unclassified,
-        "weights_source": weights_file,
+        "weights_source": effective_weights_file,
+        "config_directory_used": str(effective_config_dir),
     }
 
     # 5) Write output
@@ -265,7 +368,7 @@ def process_json(
 
 
 # =======================================================
-# CLI ENTRY POINT
+# CLI ENTRY POINT (UNCHANGED)
 # =======================================================
 
 def _parse_args() -> argparse.Namespace:
