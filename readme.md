@@ -26,7 +26,7 @@ Generate reports in json format with cost breakdowns per room type and cost cate
 
 ## 🎯 Use Cases
 
-- Facility/Project Managers - Understand and distribute operational costs
+- Facility/Project Managers - costs estimation during tender phase
 
 - BIM Consultants - Provide added value services to clients
 
