@@ -1,7 +1,7 @@
 # OpenBIM Cost Allocation Tool
 **🏢 Overview**
 
-***A web-based application that automatically calculates and allocates building operational costs (electricity, cleaning, maintenance, etc.) to different room types based on IFC model data.***
+***A web-based application that automatically Estimates and allocates building costs (electricity, cleaning, maintenance, etc.) to different room types based on IFC model data.***
 
 ## 🚀 What It Does
 - Upload IFC models and automatically extract space information
