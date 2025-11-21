@@ -5,6 +5,7 @@ import ifcopenshell
 import streamlit as st
 import pandas as pd
 import altair as alt
+import os
 
 # Import your submodules
 from external.BIManalyst_g_48.A3 import A3_Tool        # submodule for area extraction 
@@ -110,7 +111,7 @@ uploaded_ifc = st.file_uploader(
 if uploaded_ifc is not None:
     
     # Save IFC file
-    ifc_path = Path("output/uploaded.ifc")
+    ifc_path = Path("Output/uploaded.ifc")
     ifc_path.parent.mkdir(exist_ok=True)
     with open(ifc_path, "wb") as f:
         f.write(uploaded_ifc.getbuffer())
@@ -149,8 +150,14 @@ if uploaded_ifc is not None:
         weights_file_to_use = None
         st.info("📁 Using DEFAULT configuration files")
 
+
+
     # Put analyst code here ----------------------------------------------------------------------
-    A3_Tool.output_to_json(model)
+
+
+
+
+    A3_Tool.area_output_to_json(model,os.getcwd(),"A3_Tool")
     st.success("Space Extraction completed.")
 
     # Debug information
@@ -178,8 +185,8 @@ if uploaded_ifc is not None:
     
     try:
         rtc.process_json(
-            "data/A3_Tool.json",  # This input file path stays the same
-            "output/cost.json",
+            "Output/A3_Tool",  # This input file path stays the same
+            "Output/cost",
             config_dir=str(config_dir_to_use),
             weights_override_path=weights_file_to_use
         )
@@ -247,10 +254,10 @@ tab_areas,tab_cost,T3,T4 = st.tabs(["Area distribution (A3_Tool.json)","Cost ove
 with tab_cost:
     st.header("🏗️ Analyst_49 Cost overview")
 
-    cost_path = Path("output/cost.json")
+    cost_path = Path("Output/cost")
 
     if not cost_path.exists():
-        st.warning("`output/cost.json` not found. Is the cost estimation step completed?")
+        st.warning("`Output/cost.json` not found. Is the cost estimation step completed?")
     else:
         with open(cost_path, "r", encoding="utf-8") as f:
             cost_data = json.load(f)
@@ -313,10 +320,10 @@ with tab_cost:
 with tab_areas:
     st.header("Area distribution from Analyst_48")
 
-    a3_path = Path("data/A3_Tool.json")
+    a3_path = Path("Output/A3_Tool")
 
     if not a3_path.exists():
-        st.warning("`data/A3_Tool.json` not found. Run the area extraction first.")
+        st.warning("`Output/A3_Tool not found. Run the area extraction first.")
     else:
         with open(a3_path, "r", encoding="utf-8") as f:
             a3_data = json.load(f)

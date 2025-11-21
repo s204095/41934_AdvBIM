@@ -300,7 +300,7 @@ def allocate_costs(
 def process_json(
     input_path: str | Path,
     output_path: str | Path,
-    config_dir: str | Path = "data",
+    config_dir: str | Path = "Output",
     weights_override_path: str | None = None,
 ) -> None:
     """
