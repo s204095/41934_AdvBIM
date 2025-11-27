@@ -1,7 +1,7 @@
-# OpenBIM Cost Allocation Tool
+# OpenBIM Cost Allocation & Data visualisation Tool
 **🏢 Overview**
 
-***A web-based application that automatically Estimates and allocates building costs (electricity, cleaning, maintenance, etc.) to different room types based on IFC model data.***
+***A web-based application that automatically Estimates and allocates building costs (electricity, cleaning, maintenance, etc.) to different room types based on IFC model data, Locally***
 
 ## 🚀 What It Does
 - Upload IFC models and automatically extract space information
@@ -36,7 +36,6 @@ Generate reports in json format with cost breakdowns per room type and cost cate
 
 1. Clone repository. 
 2. run setup.bat
-
 3. Upload IFC model
 
 
@@ -58,3 +57,7 @@ Generate reports in json format with cost breakdowns per room type and cost cate
 - altair
 - numpy
 - csv
+
+
+## Troubleshooting
+

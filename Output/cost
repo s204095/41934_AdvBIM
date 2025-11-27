@@ -1,0 +1,660 @@
+{
+    "Total summed area": 9290.59,
+    "calculated_total_cost": 182210302.78650004,
+    "calculated_unit_price": 19612.350000000002,
+    "per_room_type": {
+        "OFFICE": {
+            "area": 2423.34,
+            "allocated_cost": 61229610.31107161,
+            "unit_price": 25266.619752519913
+        },
+        "MEETING": {
+            "area": 267.27,
+            "allocated_cost": 6861200.747845888,
+            "unit_price": 25671.421213925576
+        },
+        "SANITARY": {
+            "area": 289.52,
+            "allocated_cost": 6867042.040027726,
+            "unit_price": 23718.713871330918
+        },
+        "SOCIAL": {
+            "area": 1046.23,
+            "allocated_cost": 27124605.011607163,
+            "unit_price": 25926.043997598197
+        },
+        "TECHNICAL": {
+            "area": 0.0,
+            "allocated_cost": 0.0,
+            "unit_price": 0.0
+        },
+        "STORAGE": {
+            "area": 1134.16,
+            "allocated_cost": 19565850.719786458,
+            "unit_price": 17251.40255324333
+        },
+        "CIRCULATION": {
+            "area": 2070.8,
+            "allocated_cost": 37868880.00217863,
+            "unit_price": 18287.077459039323
+        },
+        "VERTICAL": {
+            "area": 294.68,
+            "allocated_cost": 4642385.058775702,
+            "unit_price": 15753.987575592851
+        },
+        "SPECIAL": {
+            "area": 497.12,
+            "allocated_cost": 13560116.8356249,
+            "unit_price": 27277.351214243845
+        },
+        "EXTERNAL": {
+            "area": 365.53,
+            "allocated_cost": 4490612.059581933,
+            "unit_price": 12285.20794348462
+        }
+    },
+    "per_cost_group": {
+        "03.90.01 Bygningsbasis": {
+            "rate_per_m2": 1222.96,
+            "total_cost": 11362019.9464,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.29920991513903344,
+                    "allocated_cost": 3399629.023970349
+                },
+                "MEETING": {
+                    "share": 0.032999840723633274,
+                    "allocated_cost": 374944.84852994425
+                },
+                "SANITARY": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "SOCIAL": {
+                    "share": 0.12917807221269445,
+                    "allocated_cost": 1467723.833118134
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.14003479386057516,
+                    "allocated_cost": 1591078.1210338671
+                },
+                "CIRCULATION": {
+                    "share": 0.255681783105099,
+                    "allocated_cost": 2905061.519571253
+                },
+                "VERTICAL": {
+                    "share": 0.036384154841322465,
+                    "allocated_cost": 413397.49304001196
+                },
+                "SPECIAL": {
+                    "share": 0.06137943211184411,
+                    "allocated_cost": 697394.3319534775
+                },
+                "EXTERNAL": {
+                    "share": 0.04513200800579815,
+                    "allocated_cost": 512790.77518296306
+                }
+            }
+        },
+        "04.90.01 Primære bygningsdele": {
+            "rate_per_m2": 6747.72,
+            "total_cost": 62690299.9548,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.29142290630655077,
+                    "allocated_cost": 18269389.410057243
+                },
+                "MEETING": {
+                    "share": 0.032141012061267425,
+                    "allocated_cost": 2014929.6869716996
+                },
+                "SANITARY": {
+                    "share": 0.03481672395696541,
+                    "allocated_cost": 2182670.868305633
+                },
+                "SOCIAL": {
+                    "share": 0.1258161823207237,
+                    "allocated_cost": 7887454.208853974
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.13639035521909332,
+                    "allocated_cost": 8550352.279626682
+                },
+                "CIRCULATION": {
+                    "share": 0.24902760420725334,
+                    "allocated_cost": 15611615.204777926
+                },
+                "VERTICAL": {
+                    "share": 0.03543724860333852,
+                    "allocated_cost": 2221571.7445161096
+                },
+                "SPECIAL": {
+                    "share": 0.05978201786918571,
+                    "allocated_cost": 3747752.632122466
+                },
+                "EXTERNAL": {
+                    "share": 0.0351659494556219,
+                    "allocated_cost": 2204563.919568273
+                }
+            }
+        },
+        "04.90.02 Komplettering": {
+            "rate_per_m2": 2384.61,
+            "total_cost": 22154433.819900002,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.35291789234907667,
+                    "allocated_cost": 7818696.089906212
+                },
+                "MEETING": {
+                    "share": 0.03892328979348243,
+                    "allocated_cost": 862323.4477824958
+                },
+                "SANITARY": {
+                    "share": 0.04216362053731819,
+                    "allocated_cost": 934111.1408013924
+                },
+                "SOCIAL": {
+                    "share": 0.15236544872464222,
+                    "allocated_cost": 3375570.2502094535
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.11561966119101742,
+                    "allocated_cost": 2561488.132135656
+                },
+                "CIRCULATION": {
+                    "share": 0.18094589404948574,
+                    "allocated_cost": 4008753.8347019698
+                },
+                "VERTICAL": {
+                    "share": 0.021457543002101627,
+                    "allocated_cost": 475379.7163777189
+                },
+                "SPECIAL": {
+                    "share": 0.0796366984859864,
+                    "allocated_cost": 1764305.9662431164
+                },
+                "EXTERNAL": {
+                    "share": 0.01596995186688925,
+                    "allocated_cost": 353805.2417419864
+                }
+            }
+        },
+        "04.90.03 Overflader": {
+            "rate_per_m2": 3147.86,
+            "total_cost": 29245476.6374,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.33542676894801915,
+                    "allocated_cost": 9809715.734827863
+                },
+                "MEETING": {
+                    "share": 0.04069361451154638,
+                    "allocated_cost": 1190104.1524887912
+                },
+                "SANITARY": {
+                    "share": 0.036066537230123485,
+                    "allocated_cost": 1054783.0719554937
+                },
+                "SOCIAL": {
+                    "share": 0.15929539533211795,
+                    "allocated_cost": 4658669.762630853
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.06279393304614052,
+                    "allocated_cost": 1836438.5018713623
+                },
+                "CIRCULATION": {
+                    "share": 0.2293039369259149,
+                    "allocated_cost": 6706102.930230687
+                },
+                "VERTICAL": {
+                    "share": 0.028551706401710692,
+                    "allocated_cost": 835008.262529134
+                },
+                "SPECIAL": {
+                    "share": 0.08257067784765124,
+                    "allocated_cost": 2414818.829927766
+                },
+                "EXTERNAL": {
+                    "share": 0.025297429756775656,
+                    "allocated_cost": 739835.39093805
+                }
+            }
+        },
+        "05.05.70 Spildevand": {
+            "rate_per_m2": 123.64,
+            "total_cost": 1148688.5476,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.2967144434785947,
+                    "allocated_cost": 340832.4831313692
+                },
+                "MEETING": {
+                    "share": 0.03272461532782193,
+                    "allocated_cost": 37590.39085168447
+                },
+                "SANITARY": {
+                    "share": 0.1772445584934898,
+                    "allocated_cost": 203598.79446589004
+                },
+                "SOCIAL": {
+                    "share": 0.25620140153722554,
+                    "allocated_cost": 294295.61582488
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.06943343757287111,
+                    "allocated_cost": 79757.39456045658
+                },
+                "CIRCULATION": {
+                    "share": 0.06338733623382128,
+                    "allocated_cost": 72812.30719466101
+                },
+                "VERTICAL": {
+                    "share": 0.001804035178808427,
+                    "allocated_cost": 2072.2745493647585
+                },
+                "SPECIAL": {
+                    "share": 0.09130127271167829,
+                    "allocated_cost": 104876.72634520924
+                },
+                "EXTERNAL": {
+                    "share": 0.011188899465688957,
+                    "allocated_cost": 12852.560676484663
+                }
+            }
+        },
+        "05.14.61 Sanitet": {
+            "rate_per_m2": 206.15,
+            "total_cost": 1915255.1285,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.27614008126168704,
+                    "allocated_cost": 528878.7068208529
+                },
+                "MEETING": {
+                    "share": 0.030455470350347492,
+                    "allocated_cost": 58329.99577938273
+                },
+                "SANITARY": {
+                    "share": 0.21993908222228722,
+                    "allocated_cost": 421239.4551838188
+                },
+                "SOCIAL": {
+                    "share": 0.2384362385950092,
+                    "allocated_cost": 456666.22878934105
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.04307925350463341,
+                    "allocated_cost": 82507.76120670074
+                },
+                "CIRCULATION": {
+                    "share": 0.07865602574362954,
+                    "allocated_cost": 150646.3566929145
+                },
+                "VERTICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "SPECIAL": {
+                    "share": 0.11329384832240615,
+                    "allocated_cost": 216986.6240269895
+                },
+                "EXTERNAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                }
+            }
+        },
+        "05.19.01 Vandinst": {
+            "rate_per_m2": 117.92,
+            "total_cost": 1095546.3728,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.3151590988114954,
+                    "allocated_cost": 345271.4075578506
+                },
+                "MEETING": {
+                    "share": 0.03475887508123019,
+                    "allocated_cost": 38079.95951785004
+                },
+                "SANITARY": {
+                    "share": 0.15061008738006906,
+                    "allocated_cost": 165000.33493632573
+                },
+                "SOCIAL": {
+                    "share": 0.2721276452743328,
+                    "allocated_cost": 298128.4547189004
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.058999701817829216,
+                    "allocated_cost": 64636.909322804364
+                },
+                "CIRCULATION": {
+                    "share": 0.05386214578382272,
+                    "allocated_cost": 59008.4784446918
+                },
+                "VERTICAL": {
+                    "share": 0.001532943511645439,
+                    "allocated_cost": 1679.4107038904554
+                },
+                "SPECIAL": {
+                    "share": 0.10344195446032044,
+                    "allocated_cost": 113325.45800434684
+                },
+                "EXTERNAL": {
+                    "share": 0.009507547879254738,
+                    "allocated_cost": 10415.959593339861
+                }
+            }
+        },
+        "05.29.95 Fjernvarme": {
+            "rate_per_m2": 571.85,
+            "total_cost": 5312823.8915,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.29931723743877703,
+                    "allocated_cost": 1590219.7702025129
+                },
+                "MEETING": {
+                    "share": 0.033011677292605214,
+                    "allocated_cost": 175385.22781864103
+                },
+                "SANITARY": {
+                    "share": 0.03575987132770256,
+                    "allocated_cost": 189985.89874678396
+                },
+                "SOCIAL": {
+                    "share": 0.1292244065321299,
+                    "allocated_cost": 686546.5143888084
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.1400850223301573,
+                    "allocated_cost": 744247.0534769706
+                },
+                "CIRCULATION": {
+                    "share": 0.2557734924889696,
+                    "allocated_cost": 1358879.5217077935
+                },
+                "VERTICAL": {
+                    "share": 0.03639720531516783,
+                    "allocated_cost": 193371.94198225444
+                },
+                "SPECIAL": {
+                    "share": 0.061401448032700666,
+                    "allocated_cost": 326215.08008082776
+                },
+                "EXTERNAL": {
+                    "share": 0.00902963924178994,
+                    "allocated_cost": 47972.88309540754
+                }
+            }
+        },
+        "05.36.90 Ventilation": {
+            "rate_per_m2": 1364.17,
+            "total_cost": 12673944.160300002,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.3866383267402905,
+                    "allocated_cost": 4900232.5633382695
+                },
+                "MEETING": {
+                    "share": 0.04264231415644418,
+                    "allocated_cost": 540446.3084847438
+                },
+                "SANITARY": {
+                    "share": 0.04619225051286609,
+                    "allocated_cost": 585438.0036386539
+                },
+                "SOCIAL": {
+                    "share": 0.16692359164850748,
+                    "allocated_cost": 2115580.2795899035
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.05428578631010521,
+                    "allocated_cost": 688015.0243922516
+                },
+                "CIRCULATION": {
+                    "share": 0.19823482805065576,
+                    "allocated_cost": 2512417.1413406837
+                },
+                "VERTICAL": {
+                    "share": 0.014104654995645944,
+                    "allocated_cost": 178761.60981511316
+                },
+                "SPECIAL": {
+                    "share": 0.07931435332604307,
+                    "allocated_cost": 1005225.6851645745
+                },
+                "EXTERNAL": {
+                    "share": 0.011663894259441794,
+                    "allocated_cost": 147827.54453580902
+                }
+            }
+        },
+        "05.36.95 Køling": {
+            "rate_per_m2": 822.23,
+            "total_cost": 7639001.8157,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.5276224851908679,
+                    "allocated_cost": 4030509.122377186
+                },
+                "MEETING": {
+                    "share": 0.05819144718321128,
+                    "allocated_cost": 444524.5706907616
+                },
+                "SANITARY": {
+                    "share": 0.025214334251481018,
+                    "allocated_cost": 192612.3451287302
+                },
+                "SOCIAL": {
+                    "share": 0.1594535355653227,
+                    "allocated_cost": 1218065.8477032848
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.02469353527792529,
+                    "allocated_cost": 188633.9608241233
+                },
+                "CIRCULATION": {
+                    "share": 0.09017311993638938,
+                    "allocated_cost": 688832.6269214123
+                },
+                "VERTICAL": {
+                    "share": 0.006415929829740975,
+                    "allocated_cost": 49011.2996187951
+                },
+                "SPECIAL": {
+                    "share": 0.10823561276506152,
+                    "allocated_cost": 826812.0424357071
+                },
+                "EXTERNAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                }
+            }
+        },
+        "05.51.27 Elinst": {
+            "rate_per_m2": 1233.65,
+            "total_cost": 11461336.353500001,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.370987433664491,
+                    "allocated_cost": 4252011.760150501
+                },
+                "MEETING": {
+                    "share": 0.040916178248000076,
+                    "allocated_cost": 468954.08120008925
+                },
+                "SANITARY": {
+                    "share": 0.03545793220746356,
+                    "allocated_cost": 406395.2874293406
+                },
+                "SOCIAL": {
+                    "share": 0.16016662239834295,
+                    "allocated_cost": 1835723.5319114355
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.08681388244425445,
+                    "allocated_cost": 995003.106846809
+                },
+                "CIRCULATION": {
+                    "share": 0.19021039828478745,
+                    "allocated_cost": 2180065.3526751488
+                },
+                "VERTICAL": {
+                    "share": 0.022556178033675055,
+                    "allocated_cost": 258523.94329337808
+                },
+                "SPECIAL": {
+                    "share": 0.07610375474481161,
+                    "allocated_cost": 872250.7308945575
+                },
+                "EXTERNAL": {
+                    "share": 0.016787619974173832,
+                    "allocated_cost": 192408.5590987413
+                }
+            }
+        },
+        "05.90.04 VVS øvrige": {
+            "rate_per_m2": 121.06,
+            "total_cost": 1124718.8254,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.3482264211365808,
+                    "allocated_cost": 391656.8113539809
+                },
+                "MEETING": {
+                    "share": 0.03840586775985786,
+                    "allocated_cost": 43195.80247533506
+                },
+                "SANITARY": {
+                    "share": 0.05943303365689083,
+                    "allocated_cost": 66845.45180453692
+                },
+                "SOCIAL": {
+                    "share": 0.17181713954918182,
+                    "allocated_cost": 193245.97137734367
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.09312872264755362,
+                    "allocated_cost": 104743.62754715889
+                },
+                "CIRCULATION": {
+                    "share": 0.17003858261493446,
+                    "allocated_cost": 191245.59491134994
+                },
+                "VERTICAL": {
+                    "share": 0.012098457003324532,
+                    "allocated_cost": 13607.36234993157
+                },
+                "SPECIAL": {
+                    "share": 0.09184448301451442,
+                    "allocated_cost": 103299.2190555549
+                },
+                "EXTERNAL": {
+                    "share": 0.01500729261716172,
+                    "allocated_cost": 16878.98452480822
+                }
+            }
+        },
+        "07.90.01 Fast inventar": {
+            "rate_per_m2": 1548.53,
+            "total_cost": 14386757.3327,
+            "allocation": {
+                "OFFICE": {
+                    "share": 0.38594989120702394,
+                    "allocated_cost": 5552567.427377419
+                },
+                "MEETING": {
+                    "share": 0.042566386649377,
+                    "allocated_cost": 612392.275254468
+                },
+                "SANITARY": {
+                    "share": 0.0322770014738255,
+                    "allocated_cost": 464361.38763112767
+                },
+                "SOCIAL": {
+                    "share": 0.18328901026899944,
+                    "allocated_cost": 2636934.512490853
+                },
+                "TECHNICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "STORAGE": {
+                    "share": 0.14450433818163635,
+                    "allocated_cost": 2078948.8469416173
+                },
+                "CIRCULATION": {
+                    "share": 0.0989409288062969,
+                    "allocated_cost": 1423439.1330081406
+                },
+                "VERTICAL": {
+                    "share": 0.0,
+                    "allocated_cost": 0.0
+                },
+                "SPECIAL": {
+                    "share": 0.09500775454546323,
+                    "allocated_cost": 1366853.5093703049
+                },
+                "EXTERNAL": {
+                    "share": 0.017464688867377683,
+                    "allocated_cost": 251260.24062606992
+                }
+            }
+        }
+    },
+    "unclassified_spaces": {},
+    "weights_source": "weights_default.json",
+    "config_directory_used": "A3\\data"
+}

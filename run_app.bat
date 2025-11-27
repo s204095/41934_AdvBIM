@@ -7,4 +7,4 @@ echo Press Ctrl+C in this window to stop the server
 echo ========================================
 echo.
 
-streamlit run main.py
+streamlit run A3/main.py

@@ -150,10 +150,10 @@ def get_effective_weights_file(config_dir: Path, requested_weights_file: str = N
 
 
 # =======================================================
-# CLASSIFICATION FUNCTIONS (UNCHANGED)
+# CLASSIFICATION FUNCTIONS 
 # =======================================================
 
-def _normalize(text: str) -> str:
+def _normalize(text: str) -> str: # Eliminating string case and punctuation
     """Lowercase a string and remove most punctuation."""
     t = text.lower()
     t = re.sub(r"[^a-zæøå0-9]+", " ", t)
@@ -217,7 +217,7 @@ def classify_all_spaces(
 
 
 # =======================================================
-# COST ALLOCATION FUNCTIONS (UNCHANGED)
+# COST ALLOCATION FUNCTIONS 
 # =======================================================
 
 def allocate_costs(
@@ -294,7 +294,7 @@ def allocate_costs(
 
 
 # =======================================================
-# HIGH-LEVEL PIPELINE (UPDATED)
+# HIGH-LEVEL PIPELINE 
 # =======================================================
 
 def process_json(

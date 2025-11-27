@@ -51,7 +51,7 @@ st.set_page_config(page_title="OpenBIM 🧰", layout="wide")
 
 
 # Define paths
-DATA_DIR = Path("data")
+DATA_DIR = Path("A3/data")
 CUSTOM_DATA_DIR = DATA_DIR / "custom_data"
 CUSTOM_DATA_DIR.mkdir(exist_ok=True)
 
@@ -158,6 +158,8 @@ if uploaded_ifc is not None:
 
 
     A3_Tool.area_output_to_json(model,os.getcwd(),"A3_Tool")
+    A3_Tool.price_output_to_json(model,os.getcwd(),"A3_Tool_price")
+  
     st.success("Space Extraction completed.")
 
     # Debug information

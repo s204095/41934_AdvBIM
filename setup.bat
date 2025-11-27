@@ -69,7 +69,7 @@ echo All dependencies installed successfully!
 echo.
 
 :: Check if main.py exists
-if not exist "main.py" (
+if not exist "A3/main.py" (
     echo ERROR: main.py not found in current directory
     echo Please make sure this batch file is in your project folder
     pause
@@ -86,6 +86,6 @@ echo ========================================
 echo.
 
 :: Run the Streamlit app
-streamlit run main.py
+streamlit run A3/main.py
 
 pause
