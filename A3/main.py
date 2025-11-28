@@ -88,7 +88,8 @@ st.subheader("Current Custom Files")
 custom_files = list(CUSTOM_DATA_DIR.glob("*.json"))
 if custom_files:
     for file in custom_files:
-        st.write(f"• {file.name} ({(file.stat().st_size / 1024):.1f} KB)")
+        if file.name in ["custom_weights.json", "cost_rates.json"]:
+            st.write(f"• {file.name} ({(file.stat().st_size / 1024):.1f} KB)")
     
     if st.button("🗑️ Clear Custom Files"):
         for file in custom_files:
