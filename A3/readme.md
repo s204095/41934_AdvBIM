@@ -37,6 +37,10 @@ This need arises:
 # **Dependencies**
 python, ifcopenshell, streamlit, pandas, altair, numpy, and standard libraries (json, csv, pathlib, tempfile).
 
+
+# **Data format Requirements**
+Please see requirement for JSON data format under data readme.md
+
 # **Relevant ABD Stage**
 - **Stages A–B:** conceptual and early schematic design — quick understanding of cost distribution.  
 - **Stage C:** testing alternatives and “what-if” scenarios.  
