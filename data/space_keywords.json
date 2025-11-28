@@ -1,0 +1,42 @@
+{
+  "OFFICE": [
+    "office", "kontor", "workstation", "arbejdsplads",
+    "arbejdsrum", "studieplads"
+  ],
+  "MEETING": [
+    "meeting", "møde", "conference", "seminar",
+    "project room", "projektrum", "classroom", "undervisningsrum"
+  ],
+  "SANITARY": [
+    "toilet", "wc", "bath", "bad", "shower", "bruser",
+    "sanitary", "sanitet", "omklædning", "changing"
+  ],
+  "SOCIAL": [
+    "lounge", "cafe", "caf\u00e9", "kantine", "canteen",
+    "atrium", "reception", "common", "fælles", "waiting","student work area"
+  ],
+  "TECHNICAL": [
+    "teknik", "technical", "plant room", "pump",
+    "server", "it-rum", "el-rum", "electrical room"
+  ],
+  "STORAGE": [
+    "storage", "depot", "lager", "archive", "arkiv",
+    "opbevaring", "materials library", "materialer", "utility"
+  ],
+  "CIRCULATION": [
+    "corridor", "gang", "hallway", "hall", "foyer",
+    "lobby", "passage", "distribution"
+  ],
+  "VERTICAL": [
+    "stair", "trappe", "elevator", "lift", "rampe", "ramp"
+  ],
+  "SPECIAL": [
+    "auditorium", "lecture", "lab", "laboratory",
+    "multipurpose", "gym", "sports", "studio",
+    "workshop"
+  ],
+  "EXTERNAL": [
+    "terrace", "tagterrasse", "balcony", "altan",
+    "roof deck", "courtyard", "gårdrum"
+  ]
+}
