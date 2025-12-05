@@ -13,7 +13,7 @@
 - **ID:** #2508  
 
 ### Claim
-Cost estimation for structural elements, windows, and spaces.
+Data visualization - Cost estimation for structural elements, windows, and spaces.
 
 ### Purpose of Checking This Claim
 The purpose of verifying this claim is to determine the costs associated with columns/beams, windows, and spaces. From a greater point of view, to verify the possibility of verifying and determining cost associated with any object digitally would be time saving.  

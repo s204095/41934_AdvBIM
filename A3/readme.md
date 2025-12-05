@@ -1,11 +1,19 @@
 # **A3 – About the Tool**
 
 # **State the Problem / Claim the Tool Is Solving**
-The tool visualizes and allocates estimated costs for each space in an IFC building model based on the spaces’ functions.  
+The tool in principal primaryli visualizes data aquired from analyst groups in the context of the course and in the context adv building design course - the example shows the allocation and estimation of costs for each space 
+
+in an IFC building model based on the spaces’ functions.  
+
 This allows users to instantly see which room types drive the overall cost, without spreadsheets or manual classification.
 
 # **Where the Problem Was Identified**
-This need arises:
+
+Since an IFC file is essentially a structured collection of building data, it makes sense from a managerial perspective to develop a tool that can visualize whatever information is needed at any given stage. This naturally leads to the idea of a platform where different tools can be collected, integrated, and accessed depending on the role or focus area within the built environment.
+
+The tool can be imagined as a control panel — a place where users tailor and assemble the specific tools relevant to their domain, whether that is economics, structural analysis, construction management, design, or other disciplines.
+
+from our example this need arises:
 - during the tender/early planning phase where managers need fast and transparent cost estimates per room type,
 - among BIM consultants wanting to link spatial data to cost drivers,
 - in sustainability and performance analysis where identifying high-cost spaces supports improvement strategies.
@@ -14,6 +22,9 @@ This need arises:
 
 # **Description of the Tool**
 **Input:** IFC model + optional cost rates and allocation weights (CSV/JSON).  
+
+![](./scope.svg)
+[View Scope (file)](./diagram.svg)
 
 **Process:**  
 1. Extracts IfcSpace information (area, name/function, storey, etc.).  
@@ -36,6 +47,10 @@ This need arises:
 
 # **Dependencies**
 python, ifcopenshell, streamlit, pandas, altair, numpy, and standard libraries (json, csv, pathlib, tempfile).
+
+# **Data format Requirements**
+Please see under data readme.md
+
 
 # **Relevant ABD Stage**
 - **Stages A–B:** conceptual and early schematic design — quick understanding of cost distribution.  
