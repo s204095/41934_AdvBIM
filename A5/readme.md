@@ -58,7 +58,7 @@ I didn’t fully live up to my own expectations in guiding the team, but I still
 
 However I came through with what I think being a somewhat of an product that proves the concept, But with a few take aways on how and what I should be focusing on improving in the future. One of the most important point is "Communication with different groups" 
 
-S215280
+## S215280
 
 When I started this course, my knowledge about OpenBIM and IFC was very limited. I had no experience at all with automated data extraction, using Python for BIM tasks, or working with IfcOpenShell. I also didn’t know much about digital workflows. 
 As the course progressed, I learned much more than I expected. One of the biggest things I learned was how to use IfcOpenShell. I learned how to open IFC models in Python, how to find and read information from IfcSpace, and how to work with Psets and BaseQuantities. 
